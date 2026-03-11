@@ -8,445 +8,27 @@
       name="description"
       content="Consultoria de analytics para equipos que necesitan dashboards claros, modelos utiles y decisiones respaldadas por datos."
     >
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #eef3f8;
-        --bg-strong: #0e2238;
-        --surface: rgba(255, 255, 255, 0.82);
-        --surface-strong: #f8fbff;
-        --text: #162234;
-        --muted: #5f7083;
-        --line: rgba(22, 34, 52, 0.1);
-        --accent: #2e6bff;
-        --accent-2: #8ba3bd;
-        --shadow: 0 24px 64px rgba(14, 34, 56, 0.12);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Avenir Next", "Segoe UI", sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top left, rgba(46, 107, 255, 0.16), transparent 28%),
-          radial-gradient(circle at top right, rgba(69, 93, 120, 0.14), transparent 22%),
-          linear-gradient(180deg, #f7faff 0%, var(--bg) 100%);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .page {
-        width: min(1160px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 24px 0 10px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .brand img {
-        display: block;
-        width: 172px;
-        height: auto;
-      }
-
-      .nav {
-        display: flex;
-        gap: 18px;
-        font-size: 0.96rem;
-        color: var(--muted);
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-        gap: 28px;
-        padding: 22px 0 32px;
-      }
-
-      .hero-copy,
-      .hero-panel,
-      .section-card,
-      .contact-card {
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--surface);
-        backdrop-filter: blur(10px);
-        box-shadow: var(--shadow);
-      }
-
-      .hero-copy {
-        padding: 52px;
-      }
-
-      .hero-brand {
-        display: inline-flex;
-        align-items: center;
-        margin-bottom: 22px;
-      }
-
-      .hero-brand img {
-        display: block;
-        width: min(240px, 58vw);
-        height: auto;
-      }
-
-      .eyebrow {
-        margin: 0 0 18px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--accent);
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        letter-spacing: -0.03em;
-      }
-
-      h1 {
-        font-size: clamp(3rem, 6.6vw, 6rem);
-        line-height: 0.93;
-        max-width: 10ch;
-      }
-
-      .lede {
-        margin: 22px 0 0;
-        max-width: 58ch;
-        font-size: 1.08rem;
-        line-height: 1.8;
-        color: var(--muted);
-      }
-
-      .actions {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 20px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        font-weight: 700;
-        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-      }
-
-      .button:hover {
-        transform: translateY(-1px);
-      }
-
-      .button-primary {
-        background: var(--bg-strong);
-        color: #fff;
-      }
-
-      .button-secondary {
-        border-color: var(--line);
-        color: var(--text);
-        background: rgba(255, 255, 255, 0.45);
-      }
-
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 34px;
-      }
-
-      .metric {
-        padding: 18px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.6);
-        border: 1px solid var(--line);
-      }
-
-      .metric strong {
-        display: block;
-        font-size: 1.7rem;
-        font-family: Georgia, "Times New Roman", serif;
-      }
-
-      .metric span {
-        display: block;
-        margin-top: 6px;
-        font-size: 0.92rem;
-        color: var(--muted);
-      }
-
-      .hero-panel {
-        overflow: hidden;
-        background:
-          linear-gradient(180deg, rgba(14, 34, 56, 0.98) 0%, rgba(27, 57, 92, 0.96) 100%);
-        color: #edf4ff;
-      }
-
-      .panel-top {
-        padding: 32px 32px 24px;
-      }
-
-      .panel-logo {
-        display: block;
-        width: 170px;
-        height: auto;
-        margin-bottom: 18px;
-      }
-
-      .panel-top p {
-        margin: 0;
-        color: rgba(237, 244, 255, 0.76);
-        line-height: 1.7;
-      }
-
-      .panel-grid {
-        display: grid;
-        gap: 1px;
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      .panel-item {
-        padding: 22px 32px;
-        background: rgba(0, 0, 0, 0.08);
-      }
-
-      .panel-item strong {
-        display: block;
-        font-size: 1rem;
-      }
-
-      .panel-item span {
-        display: block;
-        margin-top: 6px;
-        color: rgba(237, 244, 255, 0.72);
-        line-height: 1.6;
-      }
-
-      section {
-        padding: 18px 0;
-      }
-
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 24px;
-        align-items: end;
-        margin-bottom: 18px;
-      }
-
-      .section-head p {
-        max-width: 58ch;
-        margin: 0;
-        line-height: 1.7;
-        color: var(--muted);
-      }
-
-      h2 {
-        font-size: clamp(2rem, 4vw, 3.2rem);
-        line-height: 1;
-      }
-
-      .services {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .use-cases {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .section-card {
-        padding: 28px;
-      }
-
-      .section-card h3 {
-        font-size: 1.55rem;
-        margin-bottom: 14px;
-      }
-
-      .section-card p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.72;
-      }
-
-      .list {
-        margin: 18px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-      }
-
-      .list li {
-        padding-top: 10px;
-        border-top: 1px solid var(--line);
-        color: var(--text);
-      }
-
-      .approach {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      .step {
-        padding: 24px;
-        border-radius: 22px;
-        background: var(--surface-strong);
-        border: 1px solid var(--line);
-      }
-
-      .step-index {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        margin-bottom: 16px;
-        background: rgba(46, 107, 255, 0.12);
-        color: var(--accent);
-        font-weight: 800;
-      }
-
-      .step p {
-        margin: 10px 0 0;
-        color: var(--muted);
-        line-height: 1.68;
-      }
-
-      .contact-card {
-        padding: 34px;
-        margin: 22px 0 40px;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        align-items: center;
-      }
-
-      .contact-card p {
-        margin: 12px 0 0;
-        color: var(--muted);
-        line-height: 1.7;
-        max-width: 58ch;
-      }
-
-      .mail {
-        display: inline-flex;
-        align-items: center;
-        min-height: 52px;
-        padding: 0 22px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, #2258d8 0%, #2e6bff 100%);
-        color: #fff;
-        font-weight: 700;
-        white-space: nowrap;
-      }
-
-      footer {
-        padding: 0 0 38px;
-        font-size: 0.92rem;
-        color: var(--muted);
-      }
-
-      @media (max-width: 960px) {
-        .hero,
-        .services,
-        .use-cases,
-        .approach,
-        .contact-card {
-          grid-template-columns: 1fr;
-        }
-
-        .topbar,
-        .section-head,
-        .contact-card {
-          align-items: start;
-        }
-
-        .contact-card {
-          display: grid;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .page {
-          width: min(100% - 20px, 1160px);
-        }
-
-        .hero-copy,
-        .section-card,
-        .contact-card,
-        .panel-top,
-        .panel-item {
-          padding-left: 22px;
-          padding-right: 22px;
-        }
-
-        .hero-copy {
-          padding-top: 34px;
-          padding-bottom: 34px;
-        }
-
-        .nav {
-          display: none;
-        }
-
-        .metrics {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="page">
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="Cris Analytic">
+        <a class="brand" href="index.html" aria-label="Cris Analytic">
           <img src="assets/logotipo-negro.png" alt="Cris Analytic">
         </a>
         <nav class="nav">
-          <a href="#services">Servicios</a>
-          <a href="#use-cases">Casos</a>
-          <a href="#approach">Metodo</a>
-          <a href="#contact">Contacto</a>
+          <a class="is-active" href="index.html">Inicio</a>
+          <a href="services.html">Servicios</a>
+          <a href="cases.html">Casos</a>
+          <a href="method.html">Metodo</a>
+          <a href="contact.html">Contacto</a>
         </nav>
       </header>
 
-      <main id="top">
+      <main>
         <section class="hero">
           <div class="hero-copy">
-            <a class="hero-brand" href="#top" aria-label="Cris Analytic">
+            <a class="hero-brand" href="index.html" aria-label="Cris Analytic">
               <img src="assets/logotipo-negro.png" alt="Cris Analytic">
             </a>
             <p class="eyebrow">Analytics consulting for practical growth</p>
@@ -458,8 +40,8 @@
               aterrizan en resultados concretos.
             </p>
             <div class="actions">
-              <a class="button button-primary" href="mailto:hello@crisanalytic.com">Agendar conversacion</a>
-              <a class="button button-secondary" href="#services">Ver capacidades</a>
+              <a class="button button-primary" href="contact.html">Agendar conversacion</a>
+              <a class="button button-secondary" href="services.html">Ver capacidades</a>
             </div>
             <div class="metrics">
               <div class="metric">
@@ -504,156 +86,33 @@
           </aside>
         </section>
 
-        <section id="services">
+        <section>
           <div class="section-head">
             <div>
-              <p class="eyebrow">Servicios</p>
-              <h2>Capacidades para equipos que quieren usar datos de verdad.</h2>
+              <p class="eyebrow">Resumen</p>
+              <h2>Consultoria enfocada en decisiones, no en reportes por inercia.</h2>
             </div>
             <p>
-              Trabajamos desde el problema de negocio hacia la solucion tecnica.
-              Eso evita dashboards decorativos, modelos que nadie usa y proyectos
-              largos sin adopcion real.
+              La navegacion ahora esta separada por areas para que el sitio funcione
+              como una presentacion mas clara: capacidades, casos de uso, metodo y
+              contacto en pestañas independientes.
             </p>
           </div>
-          <div class="services">
+          <div class="cards-2">
             <article class="section-card">
-              <h3>Analytics & BI</h3>
-              <p>
-                Construccion de metricas consistentes, dashboards ejecutivos y
-                analisis para crecimiento, ventas, operaciones y producto.
-              </p>
-              <ul class="list">
-                <li>Definicion de KPIs y modelo de negocio</li>
-                <li>Dashboards en Looker Studio, Power BI o Tableau</li>
-                <li>Reporting automatizado y alertas</li>
-              </ul>
+              <h3>Servicios</h3>
+              <p>Analytics, BI, machine learning y visualizacion con foco operativo.</p>
+              <div class="subnav">
+                <a href="services.html">Abrir servicios</a>
+              </div>
             </article>
-
             <article class="section-card">
-              <h3>Machine Learning</h3>
-              <p>
-                Proyectos de prediccion y priorizacion para convertir datos
-                historicos en decisiones repetibles y accionables.
-              </p>
-              <ul class="list">
-                <li>Forecasting, scoring y churn prediction</li>
-                <li>Segmentacion y analisis de comportamiento</li>
-                <li>Evaluacion de impacto y despliegue operativo</li>
-              </ul>
+              <h3>Casos de uso</h3>
+              <p>Forecasting para CPG, CRM analytics y adtech analytics.</p>
+              <div class="subnav">
+                <a href="cases.html">Abrir casos</a>
+              </div>
             </article>
-
-            <article class="section-card">
-              <h3>Data Visualization</h3>
-              <p>
-                Interfaces y narrativas visuales para presentar hallazgos con
-                contexto, foco y claridad ejecutiva.
-              </p>
-              <ul class="list">
-                <li>Storytelling para comites y stakeholders</li>
-                <li>Visualizaciones interactivas para web o presentacion</li>
-                <li>Diseno de vistas que impulsan accion</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section id="use-cases">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Casos de uso</p>
-              <h2>Problemas concretos donde analytics genera impacto visible.</h2>
-            </div>
-            <p>
-              Aplicamos analitica en contextos donde la calidad de la decision
-              cambia ingresos, inventario, retencion o eficiencia de inversion.
-            </p>
-          </div>
-          <div class="use-cases">
-            <article class="section-card">
-              <h3>Forecasting para CPG</h3>
-              <p>
-                Modelos para anticipar demanda por producto, canal o region y
-                mejorar la planeacion comercial, el surtido y el inventario.
-              </p>
-              <ul class="list">
-                <li>Pronosticos con estacionalidad, promociones y tendencias</li>
-                <li>Alertas de quiebres, sobrestock y variacion por canal</li>
-                <li>Dashboards para supply chain, trade y ventas</li>
-              </ul>
-            </article>
-
-            <article class="section-card">
-              <h3>CRM Analytics</h3>
-              <p>
-                Analitica de clientes para entender adquisicion, retencion,
-                valor esperado y oportunidades de crecimiento comercial.
-              </p>
-              <ul class="list">
-                <li>Segmentacion y scoring de propension o churn</li>
-                <li>Analisis de cohortes, lifetime value y recurrencia</li>
-                <li>Priorizacion para ventas, marketing y customer success</li>
-              </ul>
-            </article>
-
-            <article class="section-card">
-              <h3>Adtech Analytics</h3>
-              <p>
-                Medicion y optimizacion de performance publicitaria para mejorar
-                retorno, atribucion y asignacion de presupuesto.
-              </p>
-              <ul class="list">
-                <li>Dashboards de ROAS, CAC, conversion y embudo</li>
-                <li>Analisis por canal, audiencia, formato y creatividad</li>
-                <li>Modelos para detectar saturacion y mejores inversiones</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section id="approach">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Metodo</p>
-              <h2>Un proceso corto, riguroso y orientado a implementacion.</h2>
-            </div>
-          </div>
-          <div class="approach">
-            <article class="step">
-              <div class="step-index">01</div>
-              <h3>Diagnostico</h3>
-              <p>Revisamos fuentes, objetivos, calidad de datos y decisiones que hoy estan bloqueadas.</p>
-            </article>
-            <article class="step">
-              <div class="step-index">02</div>
-              <h3>Diseno</h3>
-              <p>Definimos arquitectura minima, KPIs, entregables y criterio de adopcion desde el inicio.</p>
-            </article>
-            <article class="step">
-              <div class="step-index">03</div>
-              <h3>Construccion</h3>
-              <p>Implementamos analitica, dashboards o modelos con ciclos cortos y validacion continua.</p>
-            </article>
-            <article class="step">
-              <div class="step-index">04</div>
-              <h3>Operacion</h3>
-              <p>Dejamos documentacion, metricas de seguimiento y una solucion lista para usarse de verdad.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="contact">
-          <div class="contact-card">
-            <div>
-              <p class="eyebrow">Contacto</p>
-              <h2>Si ya tienes datos, podemos convertirlos en una ventaja operativa.</h2>
-              <p>
-                Ideal para empresas que necesitan ordenar su capa de datos,
-                construir dashboards utiles o lanzar un proyecto de machine
-                learning con enfoque de negocio.
-              </p>
-            </div>
-            <a class="mail" href="mailto:hello@crisanalytic.com">hello@crisanalytic.com</a>
           </div>
         </section>
       </main>
