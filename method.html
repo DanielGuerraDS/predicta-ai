@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Cris Analytic">
-          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
-        </a>
-        <nav class="nav">
+    <div class="header-stack">
+      <div class="page">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="Cris Analytic">
+            <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+          </a>
+          <nav class="nav">
+            <span>Proceso y ejecución</span>
+          </nav>
+        </header>
+      </div>
+      <nav class="tabbar" aria-label="Secciones del sitio">
+        <div class="tabbar-inner">
           <a href="index.html">Inicio</a>
           <a href="services.html">Servicios</a>
           <a href="cases.html">Casos</a>
           <a class="is-active" href="method.html">Metodo</a>
           <a href="contact.html">Contacto</a>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page">
 
       <main>
         <section class="page-hero">
@@ -39,6 +49,14 @@
           <div class="page-panel">
             <p class="eyebrow">Forma de trabajo</p>
             <h2>Menos complejidad innecesaria, mas decision operativa.</h2>
+            <div class="hero-visual" aria-hidden="true" style="margin-top: 24px; min-height: 190px;">
+              <div class="hero-visual-grid"></div>
+              <div class="hero-visual-copy">
+                <strong>From diagnosis to operation</strong>
+                <span>La entrega no termina en el analisis; termina cuando el sistema se usa.</span>
+              </div>
+              <img src="assets/isotipo-blanco.png" alt="">
+            </div>
             <div class="micro-grid">
               <div class="micro-card">
                 <strong>Scope preciso</strong>
@@ -57,6 +75,26 @@
         </section>
 
         <section>
+          <div class="visual-band">
+            <article class="logo-card">
+              <img src="assets/crisanalytic-line.svg" alt="Crisanalytic">
+              <p>Un metodo elegante y corto para bajar complejidad y ganar velocidad de decision.</p>
+            </article>
+            <article class="visual-card">
+              <h3>Secuencia controlada</h3>
+              <p>Priorizamos visibilidad, foco y transferencia para que el resultado se sostenga despues del proyecto.</p>
+              <div class="mini-chart" aria-hidden="true">
+                <span style="height: 22%;"></span>
+                <span style="height: 35%;"></span>
+                <span style="height: 50%;"></span>
+                <span style="height: 58%;"></span>
+                <span style="height: 70%;"></span>
+                <span style="height: 82%;"></span>
+                <span style="height: 86%;"></span>
+                <span style="height: 94%;"></span>
+              </div>
+            </article>
+          </div>
           <div class="approach">
             <article class="step">
               <div class="step-index">01</div>

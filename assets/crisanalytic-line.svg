@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title desc">
+  <title id="title">Crisanalytic line logo</title>
+  <desc id="desc">Minimal line mark with Crisanalytic wordmark.</desc>
+  <rect width="900" height="650" fill="#f5f6f2"/>
+  <g fill="none" stroke="#02084d" stroke-linecap="round" stroke-width="5">
+    <path d="M430 118h46"/>
+    <path d="M454 142h18"/>
+    <path d="M468 152h37"/>
+    <path d="M484 167h24"/>
+    <path d="M452 178h54"/>
+    <path d="M436 190h32"/>
+    <path d="M462 199h23"/>
+    <path d="M418 212h46"/>
+    <path d="M408 232h39"/>
+    <path d="M437 243h47"/>
+    <path d="M422 256h24"/>
+    <path d="M402 267h54"/>
+    <path d="M418 280h35"/>
+    <path d="M436 292h19"/>
+  </g>
+  <g fill="#02084d" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="72" font-weight="300" letter-spacing="8">
+    <text x="85" y="505">Crisanalytic</text>
+  </g>
+</svg>

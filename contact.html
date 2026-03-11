@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Cris Analytic">
-          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
-        </a>
-        <nav class="nav">
+    <div class="header-stack">
+      <div class="page">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="Cris Analytic">
+            <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+          </a>
+          <nav class="nav">
+            <span>Contacto y discovery</span>
+          </nav>
+        </header>
+      </div>
+      <nav class="tabbar" aria-label="Secciones del sitio">
+        <div class="tabbar-inner">
           <a href="index.html">Inicio</a>
           <a href="services.html">Servicios</a>
           <a href="cases.html">Casos</a>
           <a href="method.html">Metodo</a>
           <a class="is-active" href="contact.html">Contacto</a>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page">
 
       <main>
         <section class="page-hero">
@@ -40,6 +50,14 @@
           <div class="page-panel">
             <p class="eyebrow">Siguiente paso</p>
             <h2>Una primera conversacion para entender objetivos, datos y restricciones.</h2>
+            <div class="hero-visual" aria-hidden="true" style="margin-top: 24px; min-height: 190px;">
+              <div class="hero-visual-grid"></div>
+              <div class="hero-visual-copy">
+                <strong>Brief, scope, next step</strong>
+                <span>Una conversacion corta para identificar viabilidad, urgencia y mejor ruta.</span>
+              </div>
+              <img src="assets/isologo-blanco.png" alt="">
+            </div>
             <div class="micro-grid">
               <div class="micro-card">
                 <strong>Contexto</strong>
@@ -58,6 +76,26 @@
         </section>
 
         <section id="contact">
+          <div class="visual-band">
+            <article class="visual-card">
+              <h3>Lo que conviene traer a la conversacion</h3>
+              <p>Objetivo del proyecto, fuentes actuales, KPI principal y equipo que usara la solucion.</p>
+              <div class="mini-chart" aria-hidden="true">
+                <span style="height: 34%;"></span>
+                <span style="height: 46%;"></span>
+                <span style="height: 52%;"></span>
+                <span style="height: 62%;"></span>
+                <span style="height: 72%;"></span>
+                <span style="height: 68%;"></span>
+                <span style="height: 82%;"></span>
+                <span style="height: 88%;"></span>
+              </div>
+            </article>
+            <article class="logo-card">
+              <img src="assets/crisanalytic-line.svg" alt="Crisanalytic">
+              <p>Menos friccion inicial, mas claridad para estimar un proyecto realista.</p>
+            </article>
+          </div>
           <div class="contact-card">
             <div>
               <p class="eyebrow">Escribenos</p>

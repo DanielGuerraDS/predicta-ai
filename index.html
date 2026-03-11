@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Cris Analytic">
-          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
-        </a>
-        <nav class="nav">
+    <div class="header-stack">
+      <div class="page">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="Cris Analytic">
+            <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+          </a>
+          <nav class="nav">
+            <span>Consultoria de analytics</span>
+          </nav>
+        </header>
+      </div>
+      <nav class="tabbar" aria-label="Secciones del sitio">
+        <div class="tabbar-inner">
           <a class="is-active" href="index.html">Inicio</a>
           <a href="services.html">Servicios</a>
           <a href="cases.html">Casos</a>
           <a href="method.html">Metodo</a>
           <a href="contact.html">Contacto</a>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page">
 
       <main>
         <section class="hero">
@@ -43,18 +53,28 @@
               <a class="button button-primary" href="contact.html">Agendar conversacion</a>
               <a class="button button-secondary" href="services.html">Ver capacidades</a>
             </div>
-            <div class="metrics">
-              <div class="metric">
-                <strong>ML</strong>
-                <span>Modelos predictivos, scoring y segmentacion aplicada</span>
+            <div class="visual-shell">
+              <div class="hero-visual" aria-hidden="true">
+                <div class="hero-visual-grid"></div>
+                <div class="hero-visual-copy">
+                  <strong>Data systems for execution</strong>
+                  <span>Forecasting, visualizacion y activacion analitica convertidos en una capa operativa.</span>
+                </div>
+                <img src="assets/isotipo-blanco.png" alt="">
               </div>
-              <div class="metric">
-                <strong>BI</strong>
-                <span>Dashboards para equipos comerciales, operativos y directivos</span>
-              </div>
-              <div class="metric">
-                <strong>Data</strong>
-                <span>Integracion, limpieza y metricas confiables para operar</span>
+              <div class="stat-strip">
+                <div class="stat-chip">
+                  <strong>ML</strong>
+                  <span>Prediccion y scoring aplicados.</span>
+                </div>
+                <div class="stat-chip">
+                  <strong>BI</strong>
+                  <span>Dashboards claros para decision.</span>
+                </div>
+                <div class="stat-chip">
+                  <strong>DATA</strong>
+                  <span>Metricas confiables para operar.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -97,6 +117,26 @@
               como una presentacion mas clara: capacidades, casos de uso, metodo y
               contacto en pestañas independientes.
             </p>
+          </div>
+          <div class="visual-band">
+            <article class="visual-card">
+              <h3>Lectura ejecutiva inmediata</h3>
+              <p>Disenamos sistemas que permiten ver tendencia, riesgo y prioridad sin depender de interpretaciones largas.</p>
+              <div class="mini-chart" aria-hidden="true">
+                <span style="height: 28%;"></span>
+                <span style="height: 45%;"></span>
+                <span style="height: 40%;"></span>
+                <span style="height: 62%;"></span>
+                <span style="height: 54%;"></span>
+                <span style="height: 72%;"></span>
+                <span style="height: 78%;"></span>
+                <span style="height: 92%;"></span>
+              </div>
+            </article>
+            <article class="logo-card">
+              <img src="assets/crisanalytic-line.svg" alt="Crisanalytic">
+              <p>Una identidad visual sobria para una consultoria enfocada en analitica, machine learning y visualizacion.</p>
+            </article>
           </div>
           <div class="cards-2">
             <article class="section-card">

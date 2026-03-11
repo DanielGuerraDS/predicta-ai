@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Cris Analytic">
-          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
-        </a>
-        <nav class="nav">
+    <div class="header-stack">
+      <div class="page">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="Cris Analytic">
+            <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+          </a>
+          <nav class="nav">
+            <span>Aplicaciones y verticales</span>
+          </nav>
+        </header>
+      </div>
+      <nav class="tabbar" aria-label="Secciones del sitio">
+        <div class="tabbar-inner">
           <a href="index.html">Inicio</a>
           <a href="services.html">Servicios</a>
           <a class="is-active" href="cases.html">Casos</a>
           <a href="method.html">Metodo</a>
           <a href="contact.html">Contacto</a>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page">
 
       <main>
         <section class="page-hero">
@@ -39,6 +49,14 @@
           <div class="page-panel">
             <p class="eyebrow">Sectores</p>
             <h2>CPG, CRM y adtech como problemas de datos accionables.</h2>
+            <div class="hero-visual" aria-hidden="true" style="margin-top: 24px; min-height: 190px;">
+              <div class="hero-visual-grid"></div>
+              <div class="hero-visual-copy">
+                <strong>Use cases with operating leverage</strong>
+                <span>Forecasting, retention and media efficiency leidos como un mismo sistema.</span>
+              </div>
+              <img src="assets/isologo-blanco.png" alt="">
+            </div>
             <div class="micro-grid">
               <div class="micro-card">
                 <strong>Decision comercial</strong>
@@ -67,12 +85,32 @@
               concreta. No son piezas aisladas: son sistemas de trabajo.
             </p>
           </div>
+          <div class="visual-band">
+            <article class="visual-card">
+              <h3>Patrones que importan</h3>
+              <p>Demanda, retencion y performance publicitaria requieren visualizacion simple y senales priorizadas.</p>
+              <div class="mini-chart" aria-hidden="true">
+                <span style="height: 30%;"></span>
+                <span style="height: 52%;"></span>
+                <span style="height: 48%;"></span>
+                <span style="height: 70%;"></span>
+                <span style="height: 66%;"></span>
+                <span style="height: 76%;"></span>
+                <span style="height: 88%;"></span>
+                <span style="height: 80%;"></span>
+              </div>
+            </article>
+            <article class="logo-card">
+              <img src="assets/crisanalytic-line.svg" alt="Crisanalytic">
+              <p>Consultoria pensada para transformar complejidad analitica en una lectura clara.</p>
+            </article>
+          </div>
           <div class="use-cases">
             <article class="section-card">
               <h3>Forecasting para CPG</h3>
               <p>
-                Modelos para anticipar demanda por producto, canal o region y
-                mejorar la planeacion comercial, el surtido y el inventario.
+                Anticipacion de demanda por producto, canal o region para
+                mejorar planeacion comercial, surtido e inventario.
               </p>
               <ul class="list">
                 <li>Pronosticos con estacionalidad, promociones y tendencias</li>
@@ -83,8 +121,8 @@
             <article class="section-card">
               <h3>CRM Analytics</h3>
               <p>
-                Analitica de clientes para entender adquisicion, retencion,
-                valor esperado y oportunidades de crecimiento comercial.
+                Analitica de clientes para entender adquisicion, retencion y
+                oportunidades de crecimiento comercial.
               </p>
               <ul class="list">
                 <li>Segmentacion y scoring de propension o churn</li>
@@ -95,8 +133,8 @@
             <article class="section-card">
               <h3>Adtech Analytics</h3>
               <p>
-                Medicion y optimizacion de performance publicitaria para mejorar
-                retorno, atribucion y asignacion de presupuesto.
+                Medicion y optimizacion publicitaria para mejorar retorno,
+                atribucion y asignacion de presupuesto.
               </p>
               <ul class="list">
                 <li>Dashboards de ROAS, CAC, conversion y embudo</li>

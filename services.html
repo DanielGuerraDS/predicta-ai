@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Cris Analytic">
-          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
-        </a>
-        <nav class="nav">
+    <div class="header-stack">
+      <div class="page">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="Cris Analytic">
+            <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+          </a>
+          <nav class="nav">
+            <span>Capacidades y entrega</span>
+          </nav>
+        </header>
+      </div>
+      <nav class="tabbar" aria-label="Secciones del sitio">
+        <div class="tabbar-inner">
           <a href="index.html">Inicio</a>
           <a class="is-active" href="services.html">Servicios</a>
           <a href="cases.html">Casos</a>
           <a href="method.html">Metodo</a>
           <a href="contact.html">Contacto</a>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page">
 
       <main>
         <section class="page-hero">
@@ -40,6 +50,14 @@
           <div class="page-panel">
             <p class="eyebrow">Cobertura</p>
             <h2>Desde data foundations hasta visualizacion ejecutiva.</h2>
+            <div class="hero-visual" aria-hidden="true" style="margin-top: 24px; min-height: 190px;">
+              <div class="hero-visual-grid"></div>
+              <div class="hero-visual-copy">
+                <strong>Dashboards, models, decisions</strong>
+                <span>Una sola linea de trabajo entre fuentes, analisis y accion.</span>
+              </div>
+              <img src="assets/isotipo-blanco.png" alt="">
+            </div>
             <div class="micro-grid">
               <div class="micro-card">
                 <strong>Datos confiables</strong>
@@ -68,12 +86,32 @@
               decisiones sin visibilidad o modelos sin aterrizaje en operacion.
             </p>
           </div>
+          <div class="visual-band">
+            <article class="logo-card">
+              <img src="assets/crisanalytic-line.svg" alt="Crisanalytic">
+              <p>Branding sobrio y visual para hacer la capa analitica mas memorable y menos textual.</p>
+            </article>
+            <article class="visual-card">
+              <h3>Arquitectura minima, impacto rapido</h3>
+              <p>Preferimos entregables acotados y legibles frente a soluciones grandes sin adopcion.</p>
+              <div class="mini-chart" aria-hidden="true">
+                <span style="height: 42%;"></span>
+                <span style="height: 38%;"></span>
+                <span style="height: 52%;"></span>
+                <span style="height: 68%;"></span>
+                <span style="height: 58%;"></span>
+                <span style="height: 80%;"></span>
+                <span style="height: 84%;"></span>
+                <span style="height: 90%;"></span>
+              </div>
+            </article>
+          </div>
           <div class="services">
             <article class="section-card">
               <h3>Analytics & BI</h3>
               <p>
-                Construccion de metricas consistentes, dashboards ejecutivos y
-                analisis para crecimiento, ventas, operaciones y producto.
+                Dashboards ejecutivos y metricas consistentes para crecimiento,
+                ventas, operaciones y producto.
               </p>
               <ul class="list">
                 <li>Definicion de KPIs y modelo de negocio</li>
@@ -84,8 +122,8 @@
             <article class="section-card">
               <h3>Machine Learning</h3>
               <p>
-                Proyectos de prediccion y priorizacion para convertir datos
-                historicos en decisiones repetibles y accionables.
+                Prediccion y priorizacion para convertir historicos en decisiones
+                repetibles y accionables.
               </p>
               <ul class="list">
                 <li>Forecasting, scoring y churn prediction</li>
@@ -96,8 +134,7 @@
             <article class="section-card">
               <h3>Data Visualization</h3>
               <p>
-                Interfaces y narrativas visuales para presentar hallazgos con
-                contexto, foco y claridad ejecutiva.
+                Interfaces y narrativas visuales con foco y claridad ejecutiva.
               </p>
               <ul class="list">
                 <li>Storytelling para comites y stakeholders</li>
