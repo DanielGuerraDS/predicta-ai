@@ -11,16 +11,16 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f3efe8;
-        --bg-strong: #14323c;
-        --surface: rgba(255, 255, 255, 0.78);
-        --surface-strong: #fffdf9;
-        --text: #17202a;
-        --muted: #586270;
-        --line: rgba(23, 32, 42, 0.1);
-        --accent: #ca5b2d;
-        --accent-2: #0f6c74;
-        --shadow: 0 24px 64px rgba(20, 50, 60, 0.12);
+        --bg: #eef3f8;
+        --bg-strong: #0e2238;
+        --surface: rgba(255, 255, 255, 0.82);
+        --surface-strong: #f8fbff;
+        --text: #162234;
+        --muted: #5f7083;
+        --line: rgba(22, 34, 52, 0.1);
+        --accent: #2e6bff;
+        --accent-2: #8ba3bd;
+        --shadow: 0 24px 64px rgba(14, 34, 56, 0.12);
       }
 
       * {
@@ -36,9 +36,9 @@
         font-family: "Avenir Next", "Segoe UI", sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at top left, rgba(202, 91, 45, 0.18), transparent 28%),
-          radial-gradient(circle at top right, rgba(15, 108, 116, 0.18), transparent 22%),
-          linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+          radial-gradient(circle at top left, rgba(46, 107, 255, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(69, 93, 120, 0.14), transparent 22%),
+          linear-gradient(180deg, #f7faff 0%, var(--bg) 100%);
       }
 
       a {
@@ -59,10 +59,14 @@
       }
 
       .brand {
-        font: 700 0.92rem/1 "Avenir Next", "Segoe UI", sans-serif;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .brand img {
+        display: block;
+        width: 172px;
+        height: auto;
       }
 
       .nav {
@@ -92,6 +96,18 @@
 
       .hero-copy {
         padding: 52px;
+      }
+
+      .hero-brand {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 22px;
+      }
+
+      .hero-brand img {
+        display: block;
+        width: min(240px, 58vw);
+        height: auto;
       }
 
       .eyebrow {
@@ -189,17 +205,24 @@
       .hero-panel {
         overflow: hidden;
         background:
-          linear-gradient(180deg, rgba(20, 50, 60, 0.98) 0%, rgba(15, 108, 116, 0.95) 100%);
-        color: #f6efe5;
+          linear-gradient(180deg, rgba(14, 34, 56, 0.98) 0%, rgba(27, 57, 92, 0.96) 100%);
+        color: #edf4ff;
       }
 
       .panel-top {
         padding: 32px 32px 24px;
       }
 
+      .panel-logo {
+        display: block;
+        width: 170px;
+        height: auto;
+        margin-bottom: 18px;
+      }
+
       .panel-top p {
         margin: 0;
-        color: rgba(246, 239, 229, 0.76);
+        color: rgba(237, 244, 255, 0.76);
         line-height: 1.7;
       }
 
@@ -222,7 +245,7 @@
       .panel-item span {
         display: block;
         margin-top: 6px;
-        color: rgba(246, 239, 229, 0.74);
+        color: rgba(237, 244, 255, 0.72);
         line-height: 1.6;
       }
 
@@ -251,6 +274,12 @@
       }
 
       .services {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .use-cases {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 18px;
@@ -306,7 +335,7 @@
         height: 38px;
         border-radius: 50%;
         margin-bottom: 16px;
-        background: rgba(202, 91, 45, 0.12);
+        background: rgba(46, 107, 255, 0.12);
         color: var(--accent);
         font-weight: 800;
       }
@@ -339,7 +368,7 @@
         min-height: 52px;
         padding: 0 22px;
         border-radius: 999px;
-        background: var(--accent);
+        background: linear-gradient(135deg, #2258d8 0%, #2e6bff 100%);
         color: #fff;
         font-weight: 700;
         white-space: nowrap;
@@ -354,6 +383,7 @@
       @media (max-width: 960px) {
         .hero,
         .services,
+        .use-cases,
         .approach,
         .contact-card {
           grid-template-columns: 1fr;
@@ -402,9 +432,12 @@
   <body>
     <div class="page">
       <header class="topbar">
-        <a class="brand" href="#top">Cris Analytic</a>
+        <a class="brand" href="#top" aria-label="Cris Analytic">
+          <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+        </a>
         <nav class="nav">
           <a href="#services">Servicios</a>
+          <a href="#use-cases">Casos</a>
           <a href="#approach">Metodo</a>
           <a href="#contact">Contacto</a>
         </nav>
@@ -413,6 +446,9 @@
       <main id="top">
         <section class="hero">
           <div class="hero-copy">
+            <a class="hero-brand" href="#top" aria-label="Cris Analytic">
+              <img src="assets/logotipo-negro.png" alt="Cris Analytic">
+            </a>
             <p class="eyebrow">Analytics consulting for practical growth</p>
             <h1>Datos utiles, modelos claros, decisiones mejores.</h1>
             <p class="lede">
@@ -443,7 +479,8 @@
 
           <aside class="hero-panel" aria-label="Capacidades principales">
             <div class="panel-top">
-              <p class="eyebrow" style="color: #f2b9a3;">Que resolvemos</p>
+              <img class="panel-logo" src="assets/logotipo-blanco.png" alt="Cris Analytic">
+              <p class="eyebrow" style="color: #9ebcff;">Que resolvemos</p>
               <h2 style="font-size: 2.3rem; line-height: 1.04;">Una capa analitica lista para operar.</h2>
               <p style="margin-top: 16px;">
                 Desde una auditoria de datos hasta una solucion de forecasting o un
@@ -516,6 +553,59 @@
                 <li>Storytelling para comites y stakeholders</li>
                 <li>Visualizaciones interactivas para web o presentacion</li>
                 <li>Diseno de vistas que impulsan accion</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="use-cases">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Casos de uso</p>
+              <h2>Problemas concretos donde analytics genera impacto visible.</h2>
+            </div>
+            <p>
+              Aplicamos analitica en contextos donde la calidad de la decision
+              cambia ingresos, inventario, retencion o eficiencia de inversion.
+            </p>
+          </div>
+          <div class="use-cases">
+            <article class="section-card">
+              <h3>Forecasting para CPG</h3>
+              <p>
+                Modelos para anticipar demanda por producto, canal o region y
+                mejorar la planeacion comercial, el surtido y el inventario.
+              </p>
+              <ul class="list">
+                <li>Pronosticos con estacionalidad, promociones y tendencias</li>
+                <li>Alertas de quiebres, sobrestock y variacion por canal</li>
+                <li>Dashboards para supply chain, trade y ventas</li>
+              </ul>
+            </article>
+
+            <article class="section-card">
+              <h3>CRM Analytics</h3>
+              <p>
+                Analitica de clientes para entender adquisicion, retencion,
+                valor esperado y oportunidades de crecimiento comercial.
+              </p>
+              <ul class="list">
+                <li>Segmentacion y scoring de propension o churn</li>
+                <li>Analisis de cohortes, lifetime value y recurrencia</li>
+                <li>Priorizacion para ventas, marketing y customer success</li>
+              </ul>
+            </article>
+
+            <article class="section-card">
+              <h3>Adtech Analytics</h3>
+              <p>
+                Medicion y optimizacion de performance publicitaria para mejorar
+                retorno, atribucion y asignacion de presupuesto.
+              </p>
+              <ul class="list">
+                <li>Dashboards de ROAS, CAC, conversion y embudo</li>
+                <li>Analisis por canal, audiencia, formato y creatividad</li>
+                <li>Modelos para detectar saturacion y mejores inversiones</li>
               </ul>
             </article>
           </div>
